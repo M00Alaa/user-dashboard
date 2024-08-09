@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';

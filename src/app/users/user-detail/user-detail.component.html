@@ -21,14 +21,15 @@
 
     <div class="card overflow-hidden px-0">
         <div class="bg-soft bg-primary w-100">
-            <img src="assets/images/1.svg" style="max-height: 200px;" class="w-100 object-fit-cover">
+            <img src="assets/images/1.svg" style="max-height: 170px;" class="w-100 object-fit-cover">
         </div>
         <div class="card-body">
             <div class="text-center w-100">
                 <div class="mx-auto">
                     <img #imageError (error)="imageError.src = 'assets/images/1.svg'"
                         [src]="user.data.avatar ? user.data.avatar : 'assets/images/1.svg'" [alt]="user.data.first_name"
-                        class="rounded-circle border-1 border border-primary avatar-lg object-fit-cover">
+                        class="rounded-circle border-1 border border-primary avatar-lg object-fit-cover"
+                        style="width: 120px; height: 120px;">
                 </div>
             </div>
             <div class="d-flex align-items-center py-2 justify-content-center gap-2">
@@ -43,7 +44,9 @@
                 <p class="mb-0 text-center">
                     {{user.support.text}}
                 </p>
-                <a href="{{user.support.url}}" target="_blank">Link to support</a>
+                <a href="{{user.support.url}}" target="_blank">
+                    <i class='bx bx-link align-middle'></i>
+                    Link to support</a>
             </div>
         </div>
     </div>

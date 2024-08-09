@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { LoadingService } from './services/loading/loading.service';
+import { LoadingService } from './services/loading.service';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { HeaderComponent } from "./layout/header/header.component";
 
