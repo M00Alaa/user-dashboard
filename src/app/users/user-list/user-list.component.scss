@@ -1,0 +1,70 @@
+.features_area {
+  padding-bottom: 170px;
+
+  @media (max-width: 1199px) {
+    padding-bottom: 50px;
+  }
+}
+
+.feature_item {
+  padding: 45px 25px;
+  text-align: center;
+  background: #f9f9fd;
+  cursor: pointer;
+  margin-bottom: 30px;
+
+  img {
+    margin-bottom: 35px;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+
+  &:hover {
+    box-shadow: 0px 15px 30px rgba(77, 87, 222, 0.3);
+    background: #fff;
+  }
+}
+
+.after_head {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 3px;
+    bottom: -8px;
+    border-radius: 3px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: var(--bs-warning);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+  }
+}
+
+.user-card {
+  & {
+    background-image: url("../../../assets/images/bg-pattern.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .img-fluid {
+    box-shadow: 0 0 0 1px #133b588b, 8px 8px 0 0 #133b5865;
+  }
+}

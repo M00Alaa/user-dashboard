@@ -1,1 +1,45 @@
-<p>user-detail works!</p>
+@if (gettingData) {
+<div class="py-3">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="spinner-border spinner-border-sm text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+</div>
+}
+@else {
+<div class="container py-3">
+    <div class="row">
+        <div class="card overflow-hidden px-0">
+            <div class="bg-soft bg-primary w-100">
+                <img src="assets/images/1.svg" style="max-height: 200px;" class="w-100 object-fit-cover">
+            </div>
+            <div class="card-body">
+                <div class="text-center w-100">
+                    <div class="mx-auto">
+                        <img #imageError (error)="imageError.src = 'assets/images/1.svg'"
+                            [src]="user.data.avatar ? user.data.avatar : 'assets/images/1.svg'"
+                            [alt]="user.data.first_name"
+                            class="rounded-circle border-1 border border-primary avatar-lg object-fit-cover">
+                    </div>
+                </div>
+                <div class="d-flex align-items-center py-2 justify-content-center gap-2">
+                    <i class='bx bxs-user-account align-middle fs-4 text-primary'></i>
+                    <h5>{{user.data.first_name}} {{user.data.last_name}}</h5>
+                </div>
+                <div class="text-center">
+                    <p class="text-muted text-center">
+                        <i class='bx bxs-envelope align-middle'></i>
+                        {{user.data.email}}
+                    </p>
+                    <p class="mb-0 text-center">
+                        {{user.support.text}}
+                    </p>
+                    <a href="{{user.support.url}}" target="_blank">Link to support</a>
+                </div>
+            </div>
+        </div>
+        <!-- end card -->
+    </div>
+</div>
+}
