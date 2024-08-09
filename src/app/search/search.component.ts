@@ -19,6 +19,7 @@ export class SearchComponent {
   searchUser(): void {
     if (this.searchId) {
       this.router.navigate(['/user', this.searchId]);
+      this.searchId = '';
     }
   }
 }

@@ -1,6 +1,10 @@
-<form class="form-inline my-2 my-lg-0">
+<form (ngSubmit)="searchUser()" class="form-inline my-2 my-lg-0">
+    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search by ID" [(ngModel)]="searchId" name="searchId"
+        aria-label="Search"> -->
+
     <nz-input-group [nzPrefix]="prefixIconSearch">
-        <input [(ngModel)]="searchId" (ngModelChange)="searchUser()" type="text" nz-input placeholder="search.." />
+        <input [(ngModel)]="searchId" type="search" nz-input name="searchId" placeholder="search.."
+            aria-label="Search" />
     </nz-input-group>
     <ng-template #prefixIconSearch>
         <span class="bx bx-search text-primary me-1"></span>
