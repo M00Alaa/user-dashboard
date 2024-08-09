@@ -4,6 +4,19 @@
 @import "boxicons/css/boxicons.min.css";
 @import "bootstrap/scss/bootstrap";
 
+// body {
+//   font-family: Georgia, "Times New Roman", Times, serif;
+// }
+
+html,
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.pointer {
+  cursor: pointer;
 }

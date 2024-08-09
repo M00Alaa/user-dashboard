@@ -16,5 +16,5 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
 registerLocaleData(en);
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(), provideNzI18n(en_US), importProvidersFrom(FormsModule), provideAnimationsAsync(), provideHttpClient(), { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }]
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration(), provideNzI18n(en_US), importProvidersFrom(FormsModule), provideAnimationsAsync(), provideHttpClient(), { provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true }, provideAnimationsAsync()]
 };

@@ -1,22 +1,6 @@
-<!-- <div class="container pb-5">
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 py-5">
-        @for (user of users; track $index) {
-        <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" [src]="user.avatar" alt="User avatar">
-                <div class="card-body">
-                    <h5 class="card-title">{{ user.first_name }} {{ user.last_name }}</h5>
-                    <a [routerLink]="['/user', user.id]" class="btn btn-primary">View Details</a>
-                </div>
-            </div>
-        </div>
-        }
-    </div>
-    <nz-pagination [(nzPageIndex)]="page" [nzTotal]="12" [nzPageSize]="6"
-        (nzPageIndexChange)="loadUsers()"></nz-pagination>
-</div> -->
 @if (gettingData) {
-<div class="py-3">
+<mat-progress-bar mode="indeterminate"></mat-progress-bar>
+<div class="py-3" style="margin-top: 220px;">
     <div class="d-flex justify-content-center align-items-center">
         <div class="spinner-border spinner-border-sm text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
@@ -45,9 +29,10 @@
                     <div
                         class="card mb-0 h-100 rounded-3 bg-fbfbfb border-primary border-2 user-card overflow-hidden border hovering-shadow  shadow">
                         <div class="card-body">
-                            <img [src]="user.avatar? user.avatar: '/assets/images/1.svg'"
+                            <img [routerLink]="[user.id]" #imageError (error)="imageError.src = 'assets/images/1.svg'"
+                                [src]="user.avatar? user.avatar: '/assets/images/1.svg'"
                                 style="height: 300px;width: 300px;"
-                                class="img-fluid mx-auto  rounded-3 mb-3 object-fit-cover" alt="">
+                                class="img-fluid mx-auto  rounded-3 mb-3 object-fit-cover pointer" alt="">
                             <div class="text-center ">
                                 <p class="h6 my-1 text-body">
                                     {{user.first_name}} {{user.last_name}}
@@ -58,10 +43,10 @@
                                         {{user.email}}
                                     </a>
                                 </p>
-                                <a class="btn btn-warning btn-sm mx-auto mt-3" [routerLink]="[user.id]">
+                                <!-- <a class="btn btn-warning btn-sm mx-auto mt-3" [routerLink]="[user.id]">
                                     <i class='bx bxs-user align-middle'></i>
                                     User Profile
-                                </a>
+                                </a> -->
                             </div>
                         </div>
                     </div>

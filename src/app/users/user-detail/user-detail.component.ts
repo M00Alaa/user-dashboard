@@ -4,10 +4,12 @@ import { UserService } from '../../services/user.service';
 import { UserDetails } from '../../models/user';
 import { CommonModule } from '@angular/common';
 
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 @Component({
   selector: 'app-user-detail',
   standalone: true,
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, MatProgressBarModule],
   templateUrl: './user-detail.component.html',
   styleUrls: ['./user-detail.component.scss']
 })

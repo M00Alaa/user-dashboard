@@ -6,10 +6,12 @@ import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [NzPaginationModule, RouterModule, CommonModule],
+  imports: [NzPaginationModule, RouterModule, CommonModule, MatProgressBarModule],
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss']
 })
