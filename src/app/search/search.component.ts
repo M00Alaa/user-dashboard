@@ -1,32 +1,20 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 @Component({
   selector: 'app-search',
   standalone: true,
-  imports: [FormsModule, RouterLink, CommonModule],
+  imports: [FormsModule, NzInputModule],
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
-  searchId: number | undefined = undefined;
+  searchId: string = '';
 
-  search = false;
-
-  constructor(private router: Router, private route: ActivatedRoute) {
-    route.params.subscribe(params => {
-      console.log(params);
-
-      if (params['id']) {
-        this.search = false;
-      }
-      else {
-        this.search = true;
-      }
-    });
-  }
+  constructor(private router: Router) { }
 
   searchUser(): void {
     if (this.searchId) {

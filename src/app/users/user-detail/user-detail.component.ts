@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { UserService } from '../../services/user/user.service';
 import { UserDetails } from '../../models/user';
-import { CommonModule, Location } from '@angular/common';
+import { CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-user-detail',
@@ -18,7 +18,6 @@ export class UserDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private userService: UserService,
-    private location: Location
   ) { }
 
 
